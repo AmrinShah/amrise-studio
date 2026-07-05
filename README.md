@@ -1,221 +1,96 @@
-# TuunInceptionception Studio - Landing Page
+# Amrise Studio
 
-A modern, high-converting landing page for TuunInceptionception Stusosoalamel i + branding + brandiagencyvice agency. Built wit4 Next.js 14, Tailwind CSS, and Framer Motion.
+A modern business portfolio and lead-generation website for Amrise Studio built with Next.js, TypeScript and Tailwind CSS.
 
-## 🚀 Features
+## About
 
-- **Modern Design**: Clean, trendy 2025 design with smooth animations
-- **Mobile-First**: Fully responsive design that works on all devices
-- **High Converting**: Optimized for conversions with multiple CTAs
-- **Fast Performance**: Built with Next.js for optimal loading speeds
-- **SEO Optimized**: Proper meta tags and structured data
-- **Contact Integration**: WhatsApp integration and Formspree form handling
+Amrise Studio is a freelancing digital service studio helping small businesses, boutiques, clinics, startups, and local brands grow online with strategy-led execution. This website showcases services, portfolio projects, and provides a professional contact experience for potential clients.
 
-## 📋 Sections Included
+## Features
 
-1. **Hero Section** - Bold headline with main CTAs
-2. **Packages Section** - 3 tiered pricing plans (Starter, Growth, Pro)
-3. **How It Works** - 3-step process visualization
-4. **Portfolio Gallery** - Sample work showcase
-5. **Testimonials** - Client reviews and social proof
-6. **FAQ Section** - Common questions and answers
-7. **Footer** - Final CTA and contact information
+- Modern responsive UI
+- Portfolio showcase with real projects
+- Service packages (Starter, Business, Premium, Custom)
+- Contact form with Nodemailer integration
+- Gmail Compose URL integration
+- WhatsApp CTA buttons
+- Mobile responsive design
+- Smooth animations with Framer Motion
+- SEO friendly with proper meta tags
+- Clean, professional layout
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Components**: shadcn/ui
+- **Email**: Nodemailer
 - **Icons**: Lucide React
 - **Animations**: Framer Motion
-- **Forms**: Formspree integration
-- **Fonts**: Inter (Google Fonts)
-- **Deployment**: Vercel (recommended)
+- **Components**: shadcn/ui
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd social-media-landing
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-   Create a `.env.local` file:
-   ```env
-   # Formspree (optional)
-   FORMSPREEE_ID=your_formspree_id
-   
-   # WhatsApp number (replace with your actual number)
-   WHATSAPP_NUMBER=1234567890
-   ```
-
-4. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## ⚙️ Configuration
-
-### Customizing Content
-
-1. **Update company information** in `src/components/sections/FooterSection.tsx`
-2. **Modify pricing packages** in `src/components/sections/PackagesSection.tsx`
-3. **Change testimonials** in `src/components/sections/TestimonialsSection.tsx`
-4. **Update FAQ content** in `src/components/sections/FAQSection.tsx`
-
-### Setting up Formspree
-
-1. Go to [Formspree](https://formspree.io) and create an account
-2. Create a new form
-3. Copy your form ID
-4. Update the form endpoint in `src/components/ContactForm.tsx`:
-   ```javascript
-   const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-   ```
-
-### WhatsApp Integration
-
-Update the WhatsApp number in all components:
-- Replace `1234567890` with your actual WhatsApp number
-- Update the pre-filled messages as needed
-
-### Customizing Colors
-
-The color scheme can be customized in `src/app/globals.css`:
-- Primary colors: Purple and pink gradients
-- Background: Light gray to white gradients
-- Accent colors: Various gradient combinations
-
-## 📱 Responsive Design
-
-The landing page is fully responsive with breakpoints:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px  
-- **Desktop**: > 1024px
-
-## 🎨 Customization Guide
-
-### Adding New Sections
-
-1. Create a new component in `src/components/sections/`
-2. Import and add it to `src/app/page.tsx`
-3. Follow the existing pattern with motion animations
-
-### Modifying Animations
-
-Animations are powered by Framer Motion. Key animation patterns:
-- `initial={{ opacity: 0, y: 20 }}`
-- `animate={{ opacity: 1, y: 0 }}`
-- `transition={{ duration: 0.8 }}`
-- `viewport={{ once: true }}`
-
-### Styling Changes
-
-- Use Tailwind CSS classes for styling
-- Custom CSS can be added to `src/app/globals.css`
-- Component-specific styles can be added inline
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
-
-### Other Platforms
-
-The app can be deployed to any platform that supports Next.js:
-- Netlify
-- Railway
-- DigitalOcean App Platform
-- AWS Amplify
-
-## 📊 Performance
-
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **Core Web Vitals**: Optimized for all metrics
-- **Bundle Size**: Optimized with Next.js built-in optimizations
-
-## 🔧 Development
-
-### Available Scripts
+## Installation
 
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
+npm install
+npm run dev
 ```
 
-### Project Structure
+The application will be available at [http://localhost:3000](http://localhost:3000)
+
+## Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+EMAIL_USER=amrisestudio09@gmail.com
+EMAIL_PASS=YOUR_GMAIL_APP_PASSWORD
+```
+
+Note: To use Gmail SMTP, generate an App Password from your Google Account settings (Security → 2-Step Verification → App Passwords).
+
+## Build
+
+```bash
+npm run build
+npm start
+```
+
+## Folder Structure
 
 ```
 src/
-├── app/                 # Next.js app directory
-│   ├── globals.css     # Global styles
-│   ├── layout.tsx      # Root layout
-│   └── page.tsx        # Home page
-├── components/         # React components
-│   ├── sections/       # Page sections
-│   ├── ui/            # shadcn/ui components
-│   └── ContactForm.tsx # Contact form component
-└── lib/               # Utility functions
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   │   └── contact/      # Contact form endpoint
+│   ├── globals.css       # Global styles
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── components/           # React components
+│   ├── sections/         # Page sections
+│   │   ├── HeroSection.tsx
+│   │   ├── PackagesSection.tsx
+│   │   ├── HowItWorksSection.tsx
+│   │   ├── PortfolioSection.tsx
+│   │   ├── FAQSection.tsx
+│   │   └── FooterSection.tsx
+│   ├── ui/              # shadcn/ui components
+│   └── ContactForm.tsx  # Contact form component
+├── data/                # Data files
+│   └── featuredProjects.ts
+└── lib/                 # Utility functions
+    └── contactConfig.ts
 ```
 
-## 🤝 Contributing
+## Deployment
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+Optimized for Vercel deployment. The project includes environment variable configuration for production email functionality.
 
-## 📄 License
+## Contact
 
-This project is licensed under the MIT License.
+- **Email**: amrisestudio09@gmail.com
+- **Website**: https://amrise-studio.vercel.app
 
-## 🆘 Support
+## License
 
-For support or questions:
-- Email: amrisestudio09@gmail.com
-- WhatsApp: +91 8830857785
-- Create an issue on GitHub
-
-## 🎯 Target Audience
-
-This landing page is designed for:
-- Small business owners
-- Creators/influencers  
-- Startups
-- Gym/salon/boutique owners
-
-## 💡 Features for Conversion
-
-- **Multiple CTAs**: WhatsApp buttons throughout the page
-- **Social Proof**: Testimonials and statistics
-- **Clear Pricing**: Transparent package pricing
-- **Trust Signals**: Professional design and testimonials
-- **Urgency**: "Limited Time Offer" messaging
-- **FAQ Section**: Addresses common objections
-- **Mobile Optimized**: Works perfectly on mobile devices
-
----
-
-Built with ❤️ by Amrise Studio
+Copyright © Amrise Studio.
